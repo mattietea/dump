@@ -16,6 +16,8 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\" --ignore-path .gitignore"
   },
   "devDependencies": {
+    "@types/eslint": "^8.37.0",
+    "@types/prettier": "^2.7.2",
     "eslint": "^8.38.0",
     "eslint-config-custom": "*",
     "prettier": "^2.5.1",

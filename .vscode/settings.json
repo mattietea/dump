@@ -1,12 +1,14 @@
 {
   "typescript.tsdk": "node_modules/typescript/lib",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "typescript.enablePromptUseWorkspaceTsdk": true,
   "tailwindCSS.experimental.classRegex": [
     ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
   ],
   "editor.quickSuggestions": {
     "strings": true
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
   },
   "eslint.workingDirectories": [{ "mode": "auto" }]
 }
