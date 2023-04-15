@@ -1,36 +1,52 @@
 "use client";
-import { TextArea } from "@/components/text-area";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Stack } from "@/components/ui/stack";
+import { TextArea } from "@/components/ui/text-area";
 import { useLocalStorage } from "@/lib/hooks/use-local-storage";
 import { Content } from "@/lib/types";
 import { useId, useRef } from "react";
 
 export const NewContentForm = () => {
-  const ref = useRef<HTMLTextAreaElement>(null);
+  const titleRef = useRef<HTMLInputElement>(null);
+  const bodyRef = useRef<HTMLTextAreaElement>(null);
   const id = useId();
 
   const storage = useLocalStorage<Content>();
 
   const handleOnSave = () => {
-    const value = ref.current?.value;
+    const title = titleRef.current?.value;
+    const content = titleRef.current?.value;
 
-    if (!value) {
+    if (!title || !content) {
       alert("Please enter some text!");
       return;
     }
 
-    storage.setValue(id, { title: value, content: value });
+    storage.setValue(id, { title, content });
     alert("Saved!");
   };
 
   return (
-    <>
-      <TextArea
-        autoFocus={true}
-        ref={ref}
-        className="border-transparent focus:border-transparent focus:ring-0 rounded-none !p-0"
-        placeholder="Write something..."
-      />
+    <Stack y={6}>
+      <Stack y={3}>
+        <Label>Title</Label>
+        <Input
+          autoFocus={true}
+          ref={titleRef}
+          variant="flush"
+          placeholder="Write something..."
+        />
+      </Stack>
+      <Stack y={3}>
+        <Label>Body</Label>
+        <TextArea
+          ref={bodyRef}
+          variant="flush"
+          placeholder="Write something..."
+        />
+      </Stack>
       <button onClick={handleOnSave}>Save</button>
-    </>
+    </Stack>
   );
 };

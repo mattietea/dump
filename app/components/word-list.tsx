@@ -1,5 +1,5 @@
 import { FC, useMemo } from "react";
-import { useInterval } from "../hooks/use-interval";
+import { useInterval } from "../../lib/hooks/use-interval";
 
 export interface WordListProps {
   text: string;

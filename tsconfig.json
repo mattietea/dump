@@ -15,6 +15,7 @@
     "strictNullChecks": true,
     "jsx": "preserve",
     "incremental": true,
+    "checkJs": true,
     "plugins": [
       {
         "name": "next"

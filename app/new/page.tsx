@@ -1,4 +1,4 @@
-import { Page } from "@/components/page";
+import { Page } from "@/components/ui/page";
 import { NextPage } from "next";
 
 import { NewContentForm } from "./components/new-content-form";
