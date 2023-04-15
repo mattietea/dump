@@ -1,6 +1,6 @@
 import {
-  cva,
   VariantProps as ClassVariantProps,
+  cva,
 } from "class-variance-authority";
 
 export const variants = cva("", {
