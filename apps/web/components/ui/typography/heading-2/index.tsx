@@ -1,4 +1,5 @@
 import { FC, HTMLAttributes } from "react";
+
 import { classes } from "../../../../lib/utils/classes";
 
 type Heading2Props = HTMLAttributes<HTMLHeadingElement>;

@@ -1,4 +1,10 @@
 {
+  "name": "dumb",
+  "packageManager": "yarn@1.22.19",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "private": true,
   "repository": "https://github.com/mattietea/dump.git",
   "author": "Matt Thomas <mattcthomas@me.com>",
@@ -14,11 +20,5 @@
     "eslint-config-custom": "*",
     "prettier": "^2.5.1",
     "turbo": "latest"
-  },
-  "name": "new",
-  "packageManager": "yarn@1.22.19",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ]
+  }
 }

@@ -1,4 +1,5 @@
 import { NextPage } from "next";
+
 import { Page } from "../../components/ui/page";
 
 import { NewContentForm } from "./components/new-content-form";

@@ -1,8 +1,9 @@
-import { Inter as FontSans } from "next/font/google";
-import { NextPage } from "next";
-import { Sidebar } from "../components/ui/sidebar";
 import "./globals.css";
+import { NextPage } from "next";
+import { Inter as FontSans } from "next/font/google";
 import { PropsWithChildren } from "react";
+
+import { Sidebar } from "../components/ui/sidebar";
 import { classes } from "../lib/utils/classes";
 
 export const metadata = {

@@ -1,17 +1,30 @@
 module.exports = {
-  extends: ["next", "turbo", "prettier"],
+  extends: ["eslint:recommended", "next", "turbo", "prettier"],
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint"],
   rules: {
     "@next/next/no-html-link-for-pages": "off",
-    "sort-imports": [
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["error"],
+    "import/order": [
       "error",
       {
-        ignoreCase: false,
-        ignoreDeclarationSort: true, // don"t want to sort import lines, use eslint-plugin-import instead
-        ignoreMemberSort: false,
-        memberSyntaxSortOrder: ["none", "all", "multiple", "single"],
-        allowSeparatedGroups: true,
+        alphabetize: {
+          caseInsensitive: true,
+          order: "asc",
+        },
+        groups: ["builtin", "external", "parent", "sibling", "index", "object"],
+        "newlines-between": "always",
       },
     ],
   },
-  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    ecmaVersion: 2020,
+    sourceType: "module",
+  },
+  settings: {
+    "import/resolver": {
+      typescript: {},
+    },
+  },
 };

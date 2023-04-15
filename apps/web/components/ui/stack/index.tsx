@@ -1,5 +1,7 @@
 import { FC, HTMLAttributes } from "react";
+
 import { classes } from "../../../lib/utils/classes";
+
 import { VariantProps, variants } from "./variants";
 
 type HTMLDivProps = HTMLAttributes<HTMLDivElement>;

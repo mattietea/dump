@@ -1,7 +1,9 @@
+import { ChangeEventHandler, InputHTMLAttributes, forwardRef } from "react";
+
 import { classes } from "../../../lib/utils/classes";
+
 import { VariantProps, variants } from "./variants";
 
-import { ChangeEventHandler, InputHTMLAttributes, forwardRef } from "react";
 
 export interface InputProps
   extends Omit<InputHTMLAttributes<HTMLInputElement>, "onChange">,

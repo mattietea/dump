@@ -1,9 +1,10 @@
-import { ReactNode } from "react";
 import { FC } from "react";
-import { Typography } from "../typography";
-import { Header } from "./header";
-import { Content } from "./content";
+
 import { Stack, StackProps } from "../stack";
+import { Typography } from "../typography";
+
+import { Content } from "./content";
+import { Header } from "./header";
 
 export interface PageProps extends StackProps {}
 

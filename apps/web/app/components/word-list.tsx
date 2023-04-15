@@ -1,4 +1,5 @@
-import { FC, useMemo } from "react";
+import { FC, ReactNode, useMemo } from "react";
+
 import { useInterval } from "../../lib/hooks/use-interval";
 
 export interface WordListProps {
@@ -8,7 +9,7 @@ export interface WordListProps {
   index: number;
   onIndexChange: (index: number) => void;
   onCompleted: () => void;
-  children: (word: string) => JSX.Element;
+  children: (word: string) => ReactNode;
 }
 
 export const WordList: FC<WordListProps> = ({
@@ -42,7 +43,7 @@ export const WordList: FC<WordListProps> = ({
 
 const getWords = (text: string): string[] => {
   return text
-    .replace(/[\.,\/#!$%\^&\*;:{}=\-_`~()]/g, "")
+    .replace(/[.,/#!$%^&*;:{}=\-_`~()]/g, "")
     .split(" ")
     .filter((word) => word.length !== 1);
 };

@@ -1,5 +1,5 @@
-import { PropsWithChildren } from "react";
 import { FC } from "react";
+
 import { classes } from "../../../../lib/utils/classes";
 import { Stack, StackProps } from "../../stack";
 
