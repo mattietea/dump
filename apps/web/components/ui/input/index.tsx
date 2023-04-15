@@ -4,7 +4,6 @@ import { classes } from "../../../lib/utils/classes";
 
 import { VariantProps, variants } from "./variants";
 
-
 export interface InputProps
   extends Omit<InputHTMLAttributes<HTMLInputElement>, "onChange">,
     VariantProps {

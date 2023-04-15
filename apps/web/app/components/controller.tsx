@@ -6,7 +6,6 @@ import { useController } from "../hooks/use-controller";
 import { HighlightedWord } from "./highlighted-word";
 import { WordList, WordListProps } from "./word-list";
 
-
 export const Controller: FC = () => {
   const [state, dispatch] = useController({
     text: "",
