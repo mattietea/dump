@@ -1,3 +1,4 @@
+import { Sidebar } from "../components/sidebar";
 import "./globals.css";
 
 export const metadata = {
@@ -12,7 +13,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <div className="grid grid-cols-4 xl:grid-cols-5 min-h-screen">
+          <Sidebar />
+          <main className="col-span-3 xl:col-span-4">{children}</main>
+        </div>
+      </body>
     </html>
   );
 }

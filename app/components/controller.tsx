@@ -2,14 +2,13 @@
 import { HighlightedWord } from "./highlighted-word";
 import { WordList, WordListProps } from "./word-list";
 
-import { TextArea } from "./text-area";
 import { FC } from "react";
 import { useController } from "../hooks/use-controller";
 
 export const Controller: FC = () => {
   const [state, dispatch] = useController({
     text: "",
-    isPaused: false,
+    isPaused: true,
     index: 0,
     delay: 500,
   });
@@ -20,9 +19,6 @@ export const Controller: FC = () => {
 
   return (
     <>
-      {state.isPaused && (
-        <TextArea value={state.text} onChange={dispatch.setText} />
-      )}
       <button onClick={dispatch.toggleIsPaused}>
         {state.isPaused ? "Start" : "Pause"}
       </button>
