@@ -13,6 +13,9 @@ coverage
 out/
 build
 
+# swc
+.swc
+
 # misc
 .DS_Store
 *.pem

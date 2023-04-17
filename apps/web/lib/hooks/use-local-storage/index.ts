@@ -1,6 +1,6 @@
 import { useCallback } from "react";
 
-export const useLocalStorage = <T = {}>() => {
+export const useLocalStorage = <T = Record<string, unknown>>() => {
   const getValue = useCallback((key: string): T | null => {
     try {
       const value = window.localStorage.getItem(key);

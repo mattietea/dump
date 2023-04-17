@@ -1,5 +1,7 @@
 import * as React from "react";
 
-export const Button = () => {
-  return <button>Boop</button>;
+type ButtonProps = React.HTMLAttributes<HTMLButtonElement>;
+
+export const Button: React.FC<ButtonProps> = ({ children }) => {
+  return <button>{children}</button>;
 };

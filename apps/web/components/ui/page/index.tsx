@@ -6,7 +6,7 @@ import { Typography } from "../typography";
 import { Content } from "./content";
 import { Header } from "./header";
 
-export interface PageProps extends StackProps {}
+export type PageProps = StackProps
 
 const Base: FC<PageProps> = ({ children }) => {
   return (

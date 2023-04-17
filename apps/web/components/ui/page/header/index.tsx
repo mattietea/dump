@@ -3,7 +3,7 @@ import { FC } from "react";
 import { classes } from "../../../../lib/utils/classes";
 import { Stack, StackProps } from "../../stack";
 
-export interface PageHeaderProps extends StackProps {}
+export type PageHeaderProps = StackProps
 
 export const Header: FC<PageHeaderProps> = ({ className, ...rest }) => {
   return (

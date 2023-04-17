@@ -12,14 +12,18 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "fix": "turbo lint -- --fix ",
+    "fix": "turbo lint -- --fix",
     "format": "prettier --write \"**/*.{ts,tsx,md}\" --ignore-path .gitignore"
   },
   "devDependencies": {
     "@types/eslint": "^8.37.0",
+    "@types/jest": "^29.5.0",
     "@types/prettier": "^2.7.2",
+    "@types/testing-library__jest-dom": "5.14.5",
     "eslint": "^8.38.0",
     "eslint-config-custom": "*",
+    "jest": "29.5.0",
+    "jest-environment-jsdom": "29.5.0",
     "prettier": "^2.5.1",
     "turbo": "latest"
   }

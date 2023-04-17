@@ -4,7 +4,7 @@ import { classes } from "../../../lib/utils/classes";
 
 type HTMLLabelProps = HTMLAttributes<HTMLLabelElement>;
 
-export interface LabelProps extends HTMLLabelProps {}
+export type LabelProps = HTMLLabelProps
 
 export const Label: FC<LabelProps> = ({ children, className, ...rest }) => {
   return (
