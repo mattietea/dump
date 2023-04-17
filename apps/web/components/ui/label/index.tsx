@@ -1,10 +1,9 @@
 import { FC, HTMLAttributes } from "react";
-
-import { classes } from "../../../lib/utils/classes";
+import { classes } from "ui";
 
 type HTMLLabelProps = HTMLAttributes<HTMLLabelElement>;
 
-export type LabelProps = HTMLLabelProps
+export type LabelProps = HTMLLabelProps;
 
 export const Label: FC<LabelProps> = ({ children, className, ...rest }) => {
   return (

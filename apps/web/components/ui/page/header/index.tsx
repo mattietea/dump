@@ -1,9 +1,7 @@
 import { FC } from "react";
+import { Stack, StackProps, classes } from "ui";
 
-import { classes } from "../../../../lib/utils/classes";
-import { Stack, StackProps } from "../../stack";
-
-export type PageHeaderProps = StackProps
+export type PageHeaderProps = StackProps;
 
 export const Header: FC<PageHeaderProps> = ({ className, ...rest }) => {
   return (

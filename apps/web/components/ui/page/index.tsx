@@ -1,12 +1,12 @@
 import { FC } from "react";
+import { StackProps, Stack } from "ui";
 
-import { Stack, StackProps } from "../stack";
 import { Typography } from "../typography";
 
 import { Content } from "./content";
 import { Header } from "./header";
 
-export type PageProps = StackProps
+export type PageProps = StackProps;
 
 const Base: FC<PageProps> = ({ children }) => {
   return (

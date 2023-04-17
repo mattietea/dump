@@ -1,9 +1,9 @@
 "use client";
 import { useId, useRef } from "react";
+import { Stack } from "ui";
 
 import { Input } from "../../../components/ui/input";
 import { Label } from "../../../components/ui/label";
-import { Stack } from "../../../components/ui/stack";
 import { TextArea } from "../../../components/ui/text-area";
 import { useLocalStorage } from "../../../lib/hooks/use-local-storage";
 import { Content } from "../../../lib/types";

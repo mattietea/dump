@@ -1,11 +1,9 @@
-import {
-  VariantProps as ClassVariantProps,
-  cva,
-} from "class-variance-authority";
+import { variate, VariateProps } from "ui/utils";
 
-export const variants = cva("", {
+export const variants = variate("", {
   variants: {
     x: {
+      0: undefined,
       1: "space-x-1",
       2: "space-x-2",
       3: "space-x-3",
@@ -14,6 +12,7 @@ export const variants = cva("", {
       6: "space-x-6",
     },
     y: {
+      0: undefined,
       1: "space-y-1",
       2: "space-y-2",
       3: "space-y-3",
@@ -24,4 +23,4 @@ export const variants = cva("", {
   },
 });
 
-export type VariantProps = ClassVariantProps<typeof variants>;
+export type VariantProps = VariateProps<typeof variants>;

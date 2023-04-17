@@ -1,6 +1,5 @@
 import { ChangeEventHandler, InputHTMLAttributes, forwardRef } from "react";
-
-import { classes } from "../../../lib/utils/classes";
+import { classes } from "ui";
 
 import { VariantProps, variants } from "./variants";
 

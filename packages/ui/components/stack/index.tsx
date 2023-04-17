@@ -1,6 +1,6 @@
 import { FC, HTMLAttributes } from "react";
 
-import { classes } from "../../../lib/utils/classes";
+import { classes } from "../../utils";
 
 import { VariantProps, variants } from "./variants";
 

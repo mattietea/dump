@@ -1,20 +1,13 @@
-const base = require("tailwindcss/defaultTheme");
+const config = require("ui/presets/tailwind");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: "class",
+  presets: [config],
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
     "./app/**/*.{js,ts,jsx,tsx}",
+    // Read styles from the UI package
+    "../../packages/ui/**/*.{js,ts,jsx,tsx}",
   ],
-  theme: {
-    extend: {
-      ...base,
-      fontFamily: {
-        sans: ["var(--font-sans)", ...base.fontFamily.sans],
-      },
-    },
-  },
-  plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography")],
 };
