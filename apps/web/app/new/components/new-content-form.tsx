@@ -1,30 +1,26 @@
 "use client";
-import { useId, useRef } from "react";
-import { Stack } from "ui";
+import { useId, useState } from "react";
+import { Stack, Input } from "ui";
 
-import { Input } from "../../../components/ui/input";
 import { Label } from "../../../components/ui/label";
 import { TextArea } from "../../../components/ui/text-area";
 import { useLocalStorage } from "../../../lib/hooks/use-local-storage";
 import { Content } from "../../../lib/types";
 
 export const NewContentForm = () => {
-  const titleRef = useRef<HTMLInputElement>(null);
-  const bodyRef = useRef<HTMLTextAreaElement>(null);
+  const [title, setTitle] = useState("");
+  const [body, setBody] = useState("");
   const id = useId();
 
   const storage = useLocalStorage<Content>();
 
   const handleOnSave = () => {
-    const title = titleRef.current?.value;
-    const content = titleRef.current?.value;
-
-    if (!title || !content) {
+    if (!title || !body) {
       alert("Please enter some text!");
       return;
     }
 
-    storage.setValue(id, { title, content });
+    storage.setValue(id, { title, body });
     alert("Saved!");
   };
 
@@ -34,7 +30,8 @@ export const NewContentForm = () => {
         <Label>Title</Label>
         <Input
           autoFocus={true}
-          ref={titleRef}
+          value={title}
+          onChange={setTitle}
           variant="flush"
           placeholder="Write something..."
         />
@@ -42,7 +39,8 @@ export const NewContentForm = () => {
       <Stack y={3}>
         <Label>Body</Label>
         <TextArea
-          ref={bodyRef}
+          value={body}
+          onChange={setBody}
           variant="flush"
           placeholder="Write something..."
         />

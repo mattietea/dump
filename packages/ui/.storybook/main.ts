@@ -11,6 +11,7 @@ const config: StorybookConfig = {
         postCss: true,
       },
     },
+    "storybook-addon-themes",
   ],
   core: {},
   framework: {
