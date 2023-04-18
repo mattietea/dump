@@ -1,10 +1,11 @@
-import React from "react";
-import type { Decorator, Preview } from "@storybook/react";
-import { withThemeByDataAttribute } from "@storybook/addon-styling";
+import type { Preview } from "@storybook/react";
 
 import "./globals.css";
+import { bodyDecorator } from "./decorators/body-decorator";
+import { themeModeDecorator } from "./decorators/theme-mode-decorator";
 
 const preview: Preview = {
+  decorators: [themeModeDecorator, bodyDecorator],
   parameters: {
     actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
@@ -13,16 +14,6 @@ const preview: Preview = {
         date: /Date$/,
       },
     },
-  },
-};
-
-export const parameters = {
-  themes: {
-    default: "twitter",
-    list: [
-      { name: "twitter", class: "theme-twt", color: "#00aced" },
-      { name: "facebook", class: "theme-fb", color: "#3b5998" },
-    ],
   },
 };
 

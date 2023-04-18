@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "storybook dev --port 6006",
-    "build": "storybook build --docs",
+    "build": "storybook build",
     "lint": "eslint \"**/*.ts*\"",
     "test": "jest"
   },
@@ -37,7 +37,8 @@
     "tailwindcss": "^3.3.1",
     "tsconfig": "*",
     "typescript": "5.0.4",
-    "vite": "^4.2.1"
+    "vite": "^4.2.1",
+    "eslint-config-custom": "*"
   },
   "dependencies": {
     "class-variance-authority": "^0.5.2",

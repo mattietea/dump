@@ -12,7 +12,7 @@ export const metadata = {
 
 const RootLayout: NextPage<PropsWithChildren> = ({ children }) => {
   return (
-    <html className="dark" style={{ colorScheme: "dark" }} lang="en">
+    <html className="dark" lang="en">
       <Body>
         <div
           className={classes("grid grid-cols-4 xl:grid-cols-5 min-h-screen")}
